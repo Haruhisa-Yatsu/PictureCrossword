@@ -37,26 +37,35 @@ namespace PictureCrossword
             Controls.Add(l);
         }
 
-
-        private void KeyDownEvent(object sender, KeyEventArgs e)
+        /// <summary>
+        /// 矢印キーの入力を受け取るために元々の処理をオーバーライドしておく
+        /// </summary>
+        /// <param name="keyData"></param>
+        /// <returns></returns>
+        protected override bool ProcessDialogKey(Keys keyData)
         {
-            switch (e.KeyCode)
+            switch (keyData)
             {
                 case Keys.D:
+                case Keys.Right:
                     _board.Right();
-                    break;
+                    return true;
                 case Keys.A:
+                case Keys.Left:
                     _board.Left();
-                    break;
+                    return true;
                 case Keys.W:
+                case Keys.Up:
                     _board.Up();
-                    break;
+                    return true;
                 case Keys.S:
+                case Keys.Down:
                     _board.Down();
-                    break;
+                    return true;
                 default:
                     break;
             }
+            return base.ProcessDialogKey(keyData);
         }
     }
 }

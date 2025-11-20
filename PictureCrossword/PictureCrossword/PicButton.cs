@@ -38,7 +38,6 @@ namespace PictureCrossword
             _x = x;
             _y = y;
 
-
             Location = new Point(rootX + x * size.Width, rooty + y * size.Height);
             Size = size;
 
