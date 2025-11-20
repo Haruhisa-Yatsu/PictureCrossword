@@ -10,7 +10,6 @@ namespace PictureCrossword
 {
     public class HintTextHorizontal : Label
     {
-
         public HintTextHorizontal(int rootX, int rooty, int y, Size size, string text)
         {
             SetText(text);

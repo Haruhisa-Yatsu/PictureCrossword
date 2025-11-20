@@ -13,7 +13,7 @@ namespace PictureCrossword
         /// <summary>
         /// Boardの参照
         /// </summary>
-        Board _board;
+        private Board _board;
 
         /// <summary>
         /// 横位置

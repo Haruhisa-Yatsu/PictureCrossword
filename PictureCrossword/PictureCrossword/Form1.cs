@@ -18,13 +18,9 @@ namespace PictureCrossword
             InitializeComponent();
 
             Text = "PictureCrossword";
-            KeyPreview = true;
 
             _board = new Board();
             _board.Generate(this, 215, 200);
-
-
-
 
             // 特に意味はないけど隙間がもったいないのでなんか配置しておく
             var l = new Label();
@@ -38,7 +34,8 @@ namespace PictureCrossword
         }
 
         /// <summary>
-        /// 矢印キーの入力を受け取るために元々の処理をオーバーライドしておく
+        /// 移動操作の入力を受け取るために元々の処理をオーバーライドしておく
+        /// 決定操作はボタンの元々の機能を使用するため特に設定はなし
         /// </summary>
         /// <param name="keyData"></param>
         /// <returns></returns>

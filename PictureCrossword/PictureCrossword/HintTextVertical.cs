@@ -10,7 +10,6 @@ namespace PictureCrossword
 {
     public class HintTextVertical : Label
     {
-
         public HintTextVertical(int rootX, int rootY, int x, Size size, string text)
         {
             SetText(text);

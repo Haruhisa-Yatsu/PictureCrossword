@@ -41,8 +41,13 @@ namespace PictureCrossword
         /// </summary>
         private const int CELL_HEIGHT = 30;
 
-
+        /// <summary>
+        /// 現在選択しているボタンの位置 横
+        /// </summary>
         private int _selectX = 0;
+        /// <summary>
+        /// 現在選択しているボタンの位置 縦
+        /// </summary>
         private int _selectY = 0;
 
         /// <summary>
@@ -127,6 +132,9 @@ namespace PictureCrossword
             }
         }
 
+        /// <summary>
+        /// クリアメッセージ表示
+        /// </summary>
         public void ShowClearMessage()
         {
             MessageBox.Show("おめでとー＼(´・ω・｀)ノ", "完成！");
@@ -261,33 +269,55 @@ namespace PictureCrossword
             return _buttons[y * BOARD_WIDTH + x];
         }
 
-
+        /// <summary>
+        /// カーソルの右移動
+        /// </summary>
         public void Right()
         {
             _selectX++;
             Select(_selectX, _selectY);
         }
+        /// <summary>
+        /// カーソルの左移動
+        /// </summary>
         public void Left()
         {
             _selectX--;
             Select(_selectX, _selectY);
         }
+        /// <summary>
+        /// カーソルの上移動
+        /// </summary>
         public void Up()
         {
             _selectY--;
             Select(_selectX, _selectY);
         }
+        /// <summary>
+        /// カーソルの下移動
+        /// </summary>
         public void Down()
         {
             _selectY++;
             Select(_selectX, _selectY);
         }
 
+        /// <summary>
+        /// 指定した座標にカーソルを設定する
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
         public void SetSelect(int x, int y)
         {
             _selectX = x;
             _selectY = y;
         }
+
+        /// <summary>
+        /// 指定した座標を選択状態にする
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
         public void Select(int x, int y)
         {
             if (_selectY < 0) _selectY = 0;
