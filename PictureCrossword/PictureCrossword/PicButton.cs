@@ -89,7 +89,7 @@ namespace PictureCrossword
         public void ClickEvent(object o, EventArgs e)
         {
             // ボタンの反転処理
-            SetEnable(!_enable);
+            SetEnable(_enable);
 
             _board.SetSelect(_x, _y);
 
