@@ -91,7 +91,8 @@ namespace PictureCrossword
             // ボタンの反転処理
             SetEnable(_enable);
 
-            _board.SetSelect(_x, _y);
+            // 対象を選択状態にしておく
+            _board.SetSelect(_y, _x);
 
             // 盤面チェック
             if (_board.CheckBoard())
