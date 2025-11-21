@@ -68,7 +68,7 @@ namespace PictureCrossword
         };
 
         /// <summary>
-        /// 生成処理
+        /// 生成処理 (この関数を呼ばないと盤面が表示されない、絶対に呼ぶこと)
         /// </summary>
         /// <param name="form1">Form</param>
         /// <param name="rootX">生成位置横</param>

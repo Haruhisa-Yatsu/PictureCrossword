@@ -20,7 +20,6 @@ namespace PictureCrossword
             Text = "PictureCrossword";
 
             _board = new Board();
-            _board.Generate(this, 215, 200);
 
             // 特に意味はないけど隙間がもったいないのでなんか配置しておく
             var l = new Label();
