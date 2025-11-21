@@ -78,18 +78,18 @@ namespace PictureCrossword
             _form1 = form1;
 
             GenerateBoard(rootX, rootY);
-            GenerateHintVertical(rootX, rootY);
             GenerateHintHorizontal(rootX, rootY);
+            GenerateHintVertical(rootX, rootY);
 
             _form1.Size = new Size(rootX + CELL_WIDTH * (BOARD_WIDTH + 1), rootY + CELL_HEIGHT * (BOARD_HEIGHT + 1) + SystemInformation.CaptionHeight);
         }
 
         /// <summary>
-        /// 水平ヒント生成処理
+        /// 垂直ヒント生成処理
         /// </summary>
         /// <param name="rootX"></param>
         /// <param name="rootY"></param>
-        private void GenerateHintHorizontal(int rootX, int rootY)
+        private void GenerateHintVertical(int rootX, int rootY)
         {
             for (int i = 0; i < BOARD_HEIGHT; i++)
             {
@@ -99,11 +99,11 @@ namespace PictureCrossword
         }
 
         /// <summary>
-        /// 垂直ヒント生成処理
+        /// 水平ヒント生成処理
         /// </summary>
         /// <param name="rootX"></param>
         /// <param name="rootY"></param>
-        private void GenerateHintVertical(int rootX, int rootY)
+        private void GenerateHintHorizontal(int rootX, int rootY)
         {
             for (int i = 0; i < BOARD_HEIGHT; i++)
             {
