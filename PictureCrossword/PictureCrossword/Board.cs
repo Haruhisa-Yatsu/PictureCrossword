@@ -290,7 +290,7 @@ namespace PictureCrossword
         /// </summary>
         public void Up()
         {
-            _selectY--;
+            _selectY++;
             Select(_selectX, _selectY);
         }
         /// <summary>
@@ -298,7 +298,7 @@ namespace PictureCrossword
         /// </summary>
         public void Down()
         {
-            _selectY++;
+            _selectY--;
             Select(_selectX, _selectY);
         }
 
