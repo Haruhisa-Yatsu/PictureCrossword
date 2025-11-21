@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace PictureCrossword
 {
-    public class Board
+    private class Board
     {
         /// <summary>
         /// フォーム
