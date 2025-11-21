@@ -93,7 +93,7 @@ namespace PictureCrossword
         {
             for (int i = 0; i < BOARD_WIDTH; i++)
             {
-                HintTextVertical hintV = new HintTextVertical(rootX, rootY, i, new Size(CELL_WIDTH, 200), GetHintTextVertical(i));
+                HintTextHorizontal hintV = new HintTextHorizontal(rootX, rootY, i, new Size(CELL_WIDTH, 200), GetHintTextVertical(i));
                 _form1.Controls.Add(hintV);
             }
         }
@@ -107,7 +107,7 @@ namespace PictureCrossword
         {
             for (int i = 0; i < BOARD_HEIGHT; i++)
             {
-                HintTextHorizontal hint = new HintTextHorizontal(rootX, rootY, i, new Size(200, CELL_HEIGHT), GetHintTextHorizontal(i));
+                HintTextVertical hint = new HintTextVertical(rootX, rootY, i, new Size(200, CELL_HEIGHT), GetHintTextHorizontal(i));
                 _form1.Controls.Add(hint);
             }
         }
