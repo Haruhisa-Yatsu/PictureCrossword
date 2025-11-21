@@ -91,7 +91,7 @@ namespace PictureCrossword
         /// <param name="rootY"></param>
         private void GenerateHintVertical(int rootX, int rootY)
         {
-            for (int i = 0; i < BOARD_HEIGHT; i++)
+            for (int i = 0; i < BOARD_WIDTH; i++)
             {
                 HintTextVertical hintV = new HintTextVertical(rootX, rootY, i, new Size(CELL_WIDTH, 200), GetHintTextVertical(i));
                 _form1.Controls.Add(hintV);
