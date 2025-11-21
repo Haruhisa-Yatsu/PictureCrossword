@@ -124,7 +124,7 @@ namespace PictureCrossword
             {
                 for (int j = 0; j < BOARD_WIDTH; j++)
                 {
-                    PicButton picButton = new PicButton(this, rootX, rootY, j, i, new Size(CELL_WIDTH, CELL_HEIGHT));
+                    PicButton picButton = new PicButton(this, rootX, rootY, i, j, new Size(CELL_WIDTH, CELL_HEIGHT));
 
                     _form1.Controls.Add(picButton);
                     _buttons[BOARD_HEIGHT * i + j] = picButton;
